@@ -11,7 +11,7 @@ const state = {
   gifs: [],
 };
 
-const api_key = 'dc6zaTOxFJmzC';
+const api_key = 'B0zcXPfg1JWI5ojI80G1P4tzBmOl2nX2';
 var currentOffset = 0;
 //when we press next we need to see what type of api call we called last
 var wasTrending = true;
@@ -35,7 +35,7 @@ const searchGifs = (q) => {
     fetchGifs(url).then(onFetch);
 }
 
-//with the passed in url, 
+//with the passed in url,
 const fetchGifs = (q) => {
   return fetch(q)
     .then(res => res.json())
@@ -54,7 +54,7 @@ const renderGif = ({ index, playing}) => {
     <div class="grid-item">
       <img gif-index="${index}" src="${playing}" />
     </div>
-  `;  
+  `;
 };
 
 const renderGifs = function (gifs) {
@@ -84,7 +84,7 @@ $btns.addEventListener('click', () => {
     currentOffset = 0;
     var value = $searchGiphy.value;
     if (value === '') {
-        fetchTrending(); 
+        fetchTrending();
     } else {
         searchGifs(value);
     }
